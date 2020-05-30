@@ -42,11 +42,7 @@ def allData():
 countries = allData()['Country/Region'].unique()
 countries.sort()
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-<<<<<<< HEAD
 server = app.server
-=======
-
->>>>>>> origin/master
 # Название приложения.
 app.index_string = """<!DOCTYPE html>
 <html>
@@ -79,7 +75,7 @@ app.layout = html.Div(
                 )
             ]),
             html.Div(className="four columns", children=[
-                html.H5('Регион'),
+                html.H5('Регионы'),
                 dcc.Dropdown(
                     id='state'
                 )
@@ -165,8 +161,4 @@ def update_plots(country, state, metrics, n):
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     app.run_server(debug=True)
-=======
-    app.run_server(host="127.0.0.1", port=8080)
->>>>>>> origin/master
